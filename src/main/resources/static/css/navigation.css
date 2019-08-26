@@ -1,0 +1,33 @@
+.nav_wrapper {
+    width: 100%;
+}
+
+.gnb {
+    width: 100%;
+    height: 30px;
+    background: #efefef;
+    float: right;
+    line-height: 30px;
+}
+
+.gnb ul {
+    height: 100%;
+    float: right;
+    margin: 0;
+    line-height: 30px;
+}
+
+.gnb ul li {
+    height: 100%;
+    display: inline-block;
+}
+
+.gnb ul li a {
+    height: 100%;
+}
+
+.gnb ul li a p {
+    margin: 0;
+    height: 100%;
+    
+}
