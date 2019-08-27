@@ -2,20 +2,14 @@
     <div class="gnb">
         <ul>
             <li>
-                <a class="nav-link" href="#" th:href="@{/log/login}">
+                <a class="gnbmenu" href="#" th:href="@{/log/login}">
                     <p>로그인</p>
                     <span class="sr-only">(current)</span>
                 </a>
             </li>
             <li>
-                <a class="nav-link" href="#" th:href="@{/log/signup}">
+                <a class="gnbmenu" href="#" th:href="@{/log/signup}">
                     <p>회원가입</p>
-                    <span class="sr-only">(current)</span>
-                </a>
-            </li>
-            <li>
-                <a class="nav-link" href="#">
-                    <p>아이디/비밀번호 찾기</p>
                     <span class="sr-only">(current)</span>
                 </a>
             </li>
@@ -24,19 +18,21 @@
 
     <!-- Logo -->
     <div class="logo">
-        <a class="navbar-brand" href="/home"><img src="#" th:src="@{/images/logo.PNG}" style="height:3em; width:3em"></a>
+        <a href="/home">
+            <img src="#" th:src="@{/images/logo.PNG}">
+        </a>
     </div>
 
-    <div class="navbar bg-light navigation">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="/home">
+    <div class="navigation">
+        <ul>
+            <li>
+                <a href="/home">
                     <p>홈 화면</p>
                     <span class="sr-only">(current)</span>
                 </a>
             </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link" href="#">
+            <li>
+                <a href="#">
                     <p>온양정씨 소개</p>
                 </a>
                 <div class="dropdown-menu">
@@ -62,20 +58,20 @@
                     </ul>
                 </div>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="board">
+            <li>
+                <a href="board">
                     <p>자유 게시판</p>
                     <span class="sr-only">(current)</span>
                 </a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">
+            <li>
+                <a href="#">
                     <p>Q&A</p>
                     <span class="sr-only">(current)</span>
                 </a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="admin">
+            <li>
+                <a href="admin">
                     <p>회원 관리</p>
                     <span class="sr-only">(current)</span>
                 </a>
