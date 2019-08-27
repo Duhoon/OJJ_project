@@ -1,0 +1,82 @@
+/* 처음 로딩할 때 svg */
+
+/* carousel */
+.carousel_wrapper {
+    width: 100%;
+    height: 600px;
+    background: #000;
+}
+
+.carousel {
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-inner {
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.carousel-item {
+    height: 100%;
+}
+
+.carousel-item img {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+/* .content */
+.content1 {
+    width: 100%;
+    margin-top: 10em;
+    padding: 0 5em;
+}
+
+.row {
+    width: 100%;
+}
+
+.content_inner {
+    margin: 20px;
+    /* border: 1px solid #ddd; */
+    height: 30em;
+}
+
+.notice {
+    height: 100%;
+}
+
+.notice p, .schedule p, .q_and_a p {
+    font-size: 1.4em;
+    border-bottom: 3px solid #8283a7;
+    padding-bottom: 10px;
+}
+
+.content_list {
+    width: 100%;
+    margin-top: 50px;
+}
+
+.card {
+    font-size: 0.9em;
+}
+
+.card-header {
+    padding: 0;
+}
+
+.card-header h2 button {
+    color: #000;
+    font-size: 0.45em;
+}
+
+.media-body {
+    margin: 4px 0;
+}
+
+.media-body h5 {
+    font-size: 0.95em;
+}
