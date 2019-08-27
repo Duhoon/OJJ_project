@@ -1,0 +1,173 @@
+<html>
+    <head>
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <style>
+        
+    .card-img-top{
+        height:11em;
+        width:11em;
+    }
+    #page-wrapper {
+    padding-left: 250px;
+  }
+  
+  #sidebar-wrapper {
+    position: fixed;
+    width: 250px;
+    height: 100%;
+    margin-left: -250px;
+    background:white;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  
+  #page-content-wrapper {
+    width: 100%;
+    padding: 20px;
+  }
+  /* 사이드바 스타일 */
+  
+  .sidebar-nav {
+    width: 250px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .sidebar-nav li {
+    text-indent: 1.5em;
+    line-height: 2.8em;
+  }
+  
+  .sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    color: black;
+  }
+  
+  .sidebar-nav li a:hover {
+    color: black;
+    background: rgba(255, 255, 255, 0.2);
+  }
+  
+  .sidebar-nav > .sidebar-brand {
+    font-size: 1.3em;
+    line-height: 3em;
+  }
+  </style>
+
+</head>
+   
+    <body>
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light" >
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                  
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                      <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                          <a class="nav-link border border-light rounded" href="login">로그인 <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item active">
+                                <a class="nav-link border border-light rounded" href="join">회원가입 <span class="sr-only">(current)</span></a>
+                              </li>
+                        </li>
+                        <li class="nav-item active">
+                                <a class="nav-link border border-light rounded" href="#">아이디/비밀번호 찾기 <span class="sr-only">(current)</span></a>
+                              </li>
+                        </li>
+
+                      </ul>
+                    </div>
+                  </nav>
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <a class="navbar-brand mr-5" href="carousel"><img src="jung.png" style="height:3em; width:3em;"></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                  
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                      <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                          <a class="nav-link mr-5  text-center" href="carousel"><strong>홈 화면</strong> <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle mr-5 rounded" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <strong>온양정씨 소개</strong>
+                          </a>
+                          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="introduce"><strong>역사 소개</strong></a>
+                            <a class="dropdown-item" href="people"><strong>인물</strong></a>
+                            <a class="dropdown-item" href="location"><strong>역사 유적지</strong></a>
+                            <a class="dropdown-item" href="root"><strong>종가 내력</strong></a>
+                          </div>
+                        </li>
+                        <li class="nav-item active">
+                                <a class="nav-link mr-5 " href="board"><strong>자유 게시판</strong> <span class="sr-only">(current)</span></a>
+                              </li>
+                              <li class="nav-item active">
+                                    <a class="nav-link mr-5 " href="#"><strong>Q&A</strong><span class="sr-only">(current)</span></a>
+                                  </li>
+                      </ul>
+                    </div>
+                  </nav>
+
+                  <div id="page-wrapper">
+                        <!-- 사이드바 -->
+                        <div id="sidebar-wrapper">
+                          <ul class="sidebar-nav">
+                            <li class="sidebar-brand">
+                              <a href="#">정씨 소개</a>
+                            </li>
+                            <li><a href="introduce">역사 소개</a></li>
+                            <li><a href="people">인물</a></li>
+                            <li><a href="location">역사 유적지</a></li>
+                            <li><a href="root">종가 내력 </a></li>
+                          </ul>
+                        </div>
+
+
+               <div class="container mt-5">
+                      <div class="row">
+                            <div class="card lg-6 md-6 sm-6 mr-5 ">
+                                      <img class="card-img-top" src="정용진.png" style="width:11em; height:11em" alt="Card image cap">
+                                      <div class="card-body">
+                                        <h5 class="card-title">정용진</h5>
+                                        <p class="card-text">신세계 그룹 부회장</p>
+                                      </div>
+                                      </div>
+                                            <div class="card lg-6 md-6 sm-6 mr-5  ">
+                                              <img class="card-img-top" src="정상희.png" sytle=":11em; height:11em" alt="Card image cap">
+                                              <div class="card-body">
+                                                <h5 class="card-title">정상희(남)</h5>
+                                                <p class="card-text">전 기업인, 정치인</p>
+                                                
+                                           
+                                              </div>
+                                              </div>
+                                              <div class="card lg-6 md-6 sm-6 mr-5  ">
+                                                    <img class="card-img-top" src="정상희2.png" sytle=":11em; height:11em" alt="Card image cap">
+                                                    <div class="card-body">
+                                                      <h5 class="card-title">정상희(여)
+                                                      </h5>
+                                                      <p class="card-text">판소리 창가</p>
+                                                      
+                                                 
+                                                    </div>
+                                                    </div>
+                                            </div>
+
+
+
+                                        </div>
+                     
+
+    </body>
+</html>
