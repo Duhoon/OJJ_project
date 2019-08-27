@@ -10,6 +10,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class HomeController {
+
     @RequestMapping(value = "/home/{action}")
     public ModelAndView hi(@RequestParam Map<String, Object> paramMap, @PathVariable String action, ModelAndView modelAndView) {
       
@@ -22,6 +23,7 @@ public class HomeController {
 
         return modelAndView;
     }
+  
 
    
 
