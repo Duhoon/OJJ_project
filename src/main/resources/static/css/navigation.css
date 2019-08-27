@@ -1,0 +1,99 @@
+.nav_wrapper {
+    width: 100%;
+}
+
+/* .gnb */
+.gnb {
+    width: 100%;
+    height: 30px;
+    background: #353848;
+    float: right;
+    line-height: 30px;
+}
+
+.gnb ul {
+    height: 100%;
+    float: right;
+    margin: 0;
+    line-height: 30px;
+}
+
+.gnb ul li {
+    height: 100%;
+    display: inline-block;
+}
+
+.gnb ul li a {
+    height: 100%;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+.gnb ul li a p {
+    margin: 0;
+    height: 100%;
+    line-height: 30px;
+    padding: 0 5px;
+    color: #d9e1e8;
+}
+
+/* .logo */
+.logo {
+    clear: both;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+}
+
+.logo a {
+    width: 200px;
+    display: inline-block;
+    line-height: 80px;
+}
+
+.logo a img {
+    display: block;
+    width: 100%;
+}
+
+/* .navigation */
+.navigation {
+    width: 100%;
+    height: 50px;
+    background: #353848 ;
+}
+
+.navigation ul {
+    height: 100%;
+    margin: 0;
+}
+
+.navigation ul li {
+    width: 19.78%;
+    height: 100%;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+.navigation ul li a {
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+.navigation ul li a p {
+    margin: 0;
+    height: 100%;
+    line-height: 50px;
+    text-align: center;
+    color: #d9e1e8;
+}
+
+.navigation ul li:hover {
+    background: #54546c;
+}
+
+.navigation ul li:hover a p {
+    color: #FFFFF3;
+}
