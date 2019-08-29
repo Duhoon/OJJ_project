@@ -16,7 +16,7 @@ public class LogController {
             paramMap.put("isLogin", false);
         }
         modelAndView.setViewName("/log/"+action);
-        modelAndView.addObject("data", paramMap);
+        modelAndView.addObject("paramMap", paramMap);
         return modelAndView;
     }
 
