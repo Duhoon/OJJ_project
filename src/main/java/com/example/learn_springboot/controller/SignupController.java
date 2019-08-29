@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-public class SignupController{
+public class SignupController {
 
     @Autowired
     private SignupService service;
@@ -20,22 +20,17 @@ public class SignupController{
     private Map<String, Object> paramMap;
 
     @RequestMapping(value = "/log/{action}")
-    public String ActionMethod1(@PathVariable String action) {
-        String viewName = "/log/" + action;
-        return viewName;
-    }
+    public ModelAndView ActionMethod1(@PathVariable String action, @RequestParam Map<String, Object> paramMap,
+            ModelAndView modelAndView) {
+        if ("save".equals(action)) {
+            Object obj = service.save(paramMap);
+            String msg = (String) (((Map) obj).get("MSG"));
+            modelAndView.addObject("MSG", msg);
+        } else {
 
-    @RequestMapping(value = "/log/save")
-    public ModelAndView ActionMethod2(@PathVariable String action, 
-    @RequestParam Map<String, Object> paramMap,
-    ModelAndView modelAndView) {
-
-        Object obj = service.save(paramMap);
-        String msg = (String)(((Map)obj).get("MSG"));
-
-        modelAndView.addObject("MSG", msg);
+        }
         modelAndView.setViewName("/home/" + action);
         return modelAndView;
     }
-       
+
 }
