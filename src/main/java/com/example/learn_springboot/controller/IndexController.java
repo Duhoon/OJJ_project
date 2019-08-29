@@ -11,15 +11,15 @@ import org.springframework.web.servlet.ModelAndView;
 /**
  * Handles requests for the application home page.
  */
-@Controller
-public class IndexController {
+// @Controller
+// public class IndexController {
 
-	@RequestMapping(value = {"/index", "/thymeleafmerge/thymeleafExtend"}, method = RequestMethod.GET)
-	public void actionMethod(@RequestParam Map<String, Object> paramMap, ModelAndView modelandView) {
-		String viewName = "/index";
+// 	@RequestMapping(value = {"/index", "/thymeleafmerge/thymeleafExtend"}, method = RequestMethod.GET)
+// 	public void actionMethod(@RequestParam Map<String, Object> paramMap, ModelAndView modelandView) {
+// 		String viewName = "/index";
 
-		// modelandView.setViewName(viewName);
+// 		modelandView.setViewName(viewName);
 
-		// return modelandView;
-	}
-}
+// 		return modelandView;
+// 	}
+// }
