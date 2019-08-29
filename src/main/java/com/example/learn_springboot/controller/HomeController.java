@@ -17,8 +17,9 @@ public class HomeController {
 
     @Autowired
     private HomeService service;
-// action == chkLogin
-    @RequestMapping(value = "/home/{action}") 
+
+    // action == chkLogin
+    @RequestMapping(value = "/home/{action}")
     public ModelAndView home(@RequestParam Map<String, Object> paramMap, @PathVariable String action,
             ModelAndView modelAndView) {
 
@@ -29,19 +30,18 @@ public class HomeController {
 
         if ("chkLogin".equals(action)) {
             resultMap = service.login(paramMap);
-            action="index";
+            action = "index";
         }
 
-        if("chksubmit".equals(action)){
+        if ("chksubmit".equals(action)) {
             resultMap = service.submit(paramMap);
         }
 
-		modelAndView.addObject("paramMap", paramMap);
-		modelAndView.addObject("resultMap", resultMap);
-        modelAndView.setViewName("/home/"+action);
+        modelAndView.addObject("paramMap", paramMap);
+        modelAndView.addObject("resultMap", resultMap);
+        modelAndView.setViewName("/home/" + action);
 
         return modelAndView;
     }
-    
 
 }
