@@ -23,20 +23,11 @@
 <!-- Font -->
 <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap" rel="stylesheet">
 
-<script>
+<script xmlns:th="http://www.thymeleaf.org">
   // content, cate, index를 인수로 받아 form 태그로 전송하는 함수
-  function goPage(content, cate, index = 0) {
-    // name이 paging인 태그
-    var f = document.paging;
-
-    // form 태그의 하위 태그 값 매개 변수로 대입
-    f.content.value = content;
-    f.cate.value = cate;
-    f.index.value = index;
-
-    // input태그의 값들을 전송하는 주소
-    f.action = "./content.do"
-
+    function goPage (data) {
+    var f = document.hidden_loginform;
+    f.action = data.href;
     // 전송 방식 : post
     f.method = "post"
     f.submit();

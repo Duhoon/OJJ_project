@@ -22,15 +22,21 @@ public class HomeService {
 	@Autowired
 	private CommonUtil commonUtil;
 
-
 	public Object login(Object dataMap) {
 		String sqlMapId = "home.search";
 
 		Object resultObject = dao.getObject(sqlMapId, dataMap);
-		if (((Map)resultObject).get("PASSWORD").equals(((Map) dataMap).get("PASSWORD"))){
-			((Map)dataMap).put("isLogin", "true");
-		} else {
-			((Map)dataMap).put("isLogin", "false");
+		// ID값을 찾을수 없다
+		if (((Map) resultObject) == null) {
+			((Map) resultObject).put("isLogin", "false");
+		}
+		// PASSWORD 값이 같다
+		else if (((Map) resultObject).get("PASSWORD").equals(((Map) dataMap).get("PASSWORD"))) {
+			((Map) resultObject).put("isLogin", "true");
+		}
+		// PASSWORD 값이 다르다
+		else {
+			((Map) resultObject).put("isLogin", "false");
 		}
 		return resultObject;
 	}
@@ -39,13 +45,12 @@ public class HomeService {
 		String sqlMapId = "home.search";
 
 		Object resultObject = dao.getObject(sqlMapId, dataMap);
-		if (((Map)resultObject).get("PASSWORD").equals(((Map) dataMap).get("PASSWORD"))){
-			((Map)dataMap).put("isLogin", "true");
+		if (((Map) resultObject).get("PASSWORD").equals(((Map) dataMap).get("PASSWORD"))) {
+			((Map) dataMap).put("isLogin", "true");
 		} else {
-			((Map)dataMap).put("isLogin", "false");
+			((Map) dataMap).put("isLogin", "false");
 		}
 		return resultObject;
 	}
 
-	
 }

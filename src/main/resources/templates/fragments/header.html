@@ -1,15 +1,25 @@
 <div th:fragment="common_navbar" class="nav_wrapper">
+    <form action="" name="hidden_loginform">
+        <input type="hidden" name="ID" th:if="${resultMap.isLogin}=='true'" th:value="${resultMap.ID}">
+        <input type="hidden" name="PASSWORD" th:if="${resultMap.isLogin}=='true'" th:value="${resultMap.PASSWORD}">
+        <input type="hidden" name="NAME" th:if="${resultMap.isLogin}=='true'" th:value="${resultMap.NAME}">
+        <input type="hidden" name="isLogin" th:if="${resultMap.isLogin}=='true'" th:value="${resultMap.isLogin}">
+    </form>
     <div class="gnb">
         <ul>
             <li>
                 <a href="#">
-                    <p class="gnbmenu" th:if="${paramMap.isLogin}=='true'" th:text="${resultMap.NAME}"></p>
+                    <p class="gnbmenu" th:if="${resultMap.isLogin}=='true'" th:text="${resultMap.NAME}"></p>
                     <span class="sr-only">(current)</span>
                 </a>
             </li>
             <li>
+                <a class="gnbmenu" href="/home/logout">
+                    <p th:if="${resultMap.isLogin}=='true'" th:text="로그아웃"></p>
+                    <span class="sr-only">(current)</span>
+                </a>
                 <a class="gnbmenu" href="/log/login">
-                    <p>로그인</p>
+                    <p th:if="${resultMap.isLogin}=='false'" th:text="로그인"></p>
                     <span class="sr-only">(current)</span>
                 </a>
             </li>
@@ -24,7 +34,7 @@
 
     <!-- Logo -->
     <div class="logo">
-        <a href="/home/index">
+        <a href="/home/index" onclick="goPage(this); return false">
             <img th:src="@{/images/logo.PNG}">
         </a>
     </div>
@@ -32,7 +42,7 @@
     <div class="navigation">
         <ul>
             <li>
-                <a href="/home/index">
+                <a href="/home/index" onclick="goPage(this); return false">
                     <p>홈 화면</p>
                     <span class="sr-only">(current)</span>
                 </a>
