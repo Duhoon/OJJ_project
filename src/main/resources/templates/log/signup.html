@@ -5,7 +5,7 @@
 <head>
     <th:block th:replace="fragments/commonLink"></th:block>
     <script>
-        function signup_submit(v) { //구현중
+        function signup_submit(v) { 
             if (v.ID.value == "") {
                 alert("아이디를 입력해주세요");
                 v.ID.focus();
@@ -36,7 +36,7 @@
             </div>
         </div>
         <div class="col-12 mt-5 px-5 py-5">
-            <form action="/log/save" name="signup_form" onsubmit="return signup_submit(this)">
+            <form action="/log/save" name="signup_form" method="POST" onsubmit="return signup_submit(this)">
                 <div class="mb-4">
                     <h5>사이트 이용정보</h5>
                 </div>
@@ -62,11 +62,11 @@
                 </div>
                 <div class="form-group">
                     <label for="inputName">성명</label>
-                    <input type="text" class="form-control" id="inputName" value="asd">
+                    <input type="text" name="NAME" class="form-control" id="inputName" value="asd">
                 </div>
                 <div class="form-group">
                     <label for="inputEmail">이메일 주소</label>
-                    <input type="email" class="form-control" id="inputEmail" value="asd">
+                    <input type="email" name="EMAIL" class="form-control" id="inputEmail" value="asd@asd">
                 </div>
 
                 <div class="form-group">
@@ -75,7 +75,7 @@
                 </div>
                 <div class="form-group">
                     <label for="inputAddress">주소</label>
-                    <input type="address" class="form-control" id="inputAddress" value="asd">
+                    <input type="address" name="ADDRESS" class="form-control" id="inputAddress" value="asd">
                 </div>
 
                 <hr class="featurette-divider">

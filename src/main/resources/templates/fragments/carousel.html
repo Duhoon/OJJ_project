@@ -1,0 +1,59 @@
+<section class="visual" th:fragment="slider">
+    <div class="text_wrap">
+        <div class="visual_text">
+            <div class="textp1">
+                <span>온</span><span>양</span> <span>정</span> <span>씨</span>
+            </div>
+            <div class="textp2">
+                <span>溫</span><span>陽</span> <span>鄭</span> <span>氏</span>
+            </div>
+            <div class="textp3">
+                <span>종</span> <span>친</span><span>회</span>
+            </div>
+        </div>
+        <div class="touch_text">
+            <span>Click</span>
+        </div>
+    </div>
+
+    <div class="carousel_wrapper">
+        <div id="mainCarousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#mainCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#mainCarousel" data-slide-to="1"></li>
+                <li data-target="#mainCarousel" data-slide-to="2"></li>
+                <li data-target="#mainCarousel" data-slide-to="3"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img th:src="@{/images/carousel01.JPG}">
+                    <div class="carousel-caption">
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img th:src="@{/images/carousel02.JPG}">
+                    <div class="carousel-caption">
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img th:src="@{/images/carousel03.JPG}">
+                    <div class="carousel-caption">
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img th:src="@{/images/carousel04.JPG}">
+                    <div class="carousel-caption">
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#mainCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#mainCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+</section>

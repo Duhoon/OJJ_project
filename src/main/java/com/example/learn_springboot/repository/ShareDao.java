@@ -16,9 +16,8 @@ public class ShareDao{
 		return resultObject;
     }
 
-    public Object getObject(String sqlMapId, Object dataMap) {
-		Object resultObject = sqlSession.selectOne(sqlMapId, dataMap);
-		
+    public int getObject(String sqlMapId, Object dataMap) {
+		int resultObject = sqlSession.selectOne(sqlMapId, dataMap);
 		return resultObject;
 	}
 

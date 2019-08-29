@@ -6,41 +6,25 @@
 
 <mapper namespace="signup">
 
-	<insert id="update" parameterType="Map">
-	    update CIP_ORGANIZATION 
-		set NAME = #{NAME} 			<!-- 명칭 -->
-			, TELEPHONE = #{TELEPHONE} 			<!-- 대표 전화번호 -->
-			, ORDER_NUMBER = #{ORDER_NUMBER} 			<!-- 정렬순서 -->
-			, PARENT_ORGANIZATION_SEQ = null 			<!-- 상위 조직 일련번호 -->
-		where ORGANIZATION_SEQ = #{ORGANIZATION_SEQ}
-	</insert>
-	<select id="signup_chk" resultType="Map" parameterType="Map">
+	<select id="signup_chk" resultType="_int" parameterType="Map">
 		select 
 			count(*) as ID_COUNT
-		from MEMBER
+		from home
 		where ID = #{ID}
 	</select>
 
 	<insert id="save" parameterType="Map">
         
-	    INSERT INTO MEMBER (
+	    INSERT INTO home (
 			ID			
 			, PASSWORD			
 			, NAME			
-			, EMAIL			
-			, ADDRESS		
 		)
 		values(
 			#{ID}			
 			, #{PASSWORD}			
 			, #{NAME}			
-			, #{EMAIL}			
-			, #{ADDRESS}			
 		)
 	</insert>
 
-	<delete id="delete" parameterType="Map">
-		delete from CIP_ORGANIZATION
-		where ORGANIZATION_SEQ = #{ORGANIZATION_SEQ}
-	</delete>
 </mapper>

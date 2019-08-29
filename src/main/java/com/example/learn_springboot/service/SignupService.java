@@ -16,25 +16,20 @@ public class SignupService {
 	@Autowired
 	private ShareDao dao;
 
-	public Object save(Object dataMap) {
+	public int save(Object dataMap) {
 
-        String sqlMapId = "signup.save";
-
-        Object obj_count=dao.getObject("signup.signup_chk", dataMap);
-        String string_id = (String)(((Map)obj_count).get("ID_COUNT"));
-        int int_id = Integer.parseInt(string_id);
-
-        if(int_id>0){
-            ((Map) obj_count).put("MSG", "중복아이디있음");
-           
-        }else{
-            dao.saveObject(sqlMapId, dataMap) ;
-            ((Map) obj_count).put("MSG", "저장완료");
-        }
-        return obj_count;
+        int obj_count=dao.getObject("signup.signup_chk", dataMap);
         
 
-	
+        if( obj_count>0){
+            ((Map) dataMap).put("MSG", "중복아이디있음");
+           
+        }else{
+            dao.saveObject("signup.save", dataMap) ;
+            ((Map) dataMap).put("MSG", "저장완료");
+        }
+        return obj_count;
+//
 		// if (((Map)resultObject).get("PASSWORD").equals(((Map) dataMap).get("PASSWORD"))){
 		// 	((Map)dataMap).put("isLogin", "true");
 		// } else {

@@ -1,0 +1,162 @@
+@charset "utf-8";
+
+/* visual */
+.visual {
+	position: relative;
+	background-color:#f1f8ff;
+}
+
+.text_wrap{
+    position: absolute;
+    width: 100%;
+    height:100%;
+    background:rgba(26,26,26,.9);
+    padding: 15.281% 0;
+    display: block;
+    z-index: 80;
+}
+
+.visual_text {
+	position: absolute;
+	z-index: 3;
+    top: 34.658%;
+	line-height: 2.057;
+	width: 100%;
+	text-align: center;
+	font-size: 1.5rem;
+	color: #e9eff6;
+	display: block;
+    margin: 0 auto;
+    perspective: 500px;
+}
+
+.visual_text div:nth-of-type(2){
+	color:#63acdc;
+}
+
+.touch_text {
+    width: auto;
+	text-align: center;
+  	margin-top: 10%;
+	animation: touch 4s ;
+}
+
+@keyframes touch{
+    0%{opacity: 0; transform: translateY(40px);}
+    40%{opacity: 0;}
+}
+
+.touch_text span{
+    color:#fff;
+    font-size: 1.4rem;
+    color:#e9eff6;
+    padding: 4px 8%;
+	border: 2px solid #666 ;
+	cursor: pointer;
+}
+
+.touch_text span:hover{
+    background: #fff;
+	color:#262626;
+}
+
+.textp1 span, .textp2 span, .textp3 span {
+	display: inline-block;
+}
+
+.textp1 {
+	display: block;
+}
+
+/* 문구 기울임 */
+.textp1, .textp2, .textp3 {
+    transition: .5s;
+    margin-bottom: 10px;
+}
+
+.textp1 span:nth-of-type(1),
+.textp1 span:nth-of-type(4) {
+    animation:ani1 4s ;
+}
+
+@keyframes ani1{
+    0%{opacity: 0; transform: translate(-20px,-30px);}
+    20%{opacity: 0;}
+}
+
+.textp1 span:nth-of-type(2) {
+    animation: ani2 4.2s ;
+}
+
+@keyframes ani2{
+    0%{opacity: 0; transform: translate(-10px,-25px);}
+    100%{opacity: .9;}
+}
+
+.textp1 span:nth-of-type(3) {
+    display: inline-block;
+    animation:ani3 4s ;
+}
+
+@keyframes ani3{
+    0%{opacity: 0; transform: translate(-10px, -20px);}
+    40%{opacity: 1;}
+}
+
+/* textp2 */
+.textp2 span:nth-of-type(1),
+.textp2 span:nth-of-type(4) {
+    animation: ani8 3.5s ;
+}
+
+@keyframes ani8 {
+    0%{opacity: 0; transform: translate(-35px, 5px);}
+    30%{opacity: 0;}
+}
+
+.textp2 span:nth-of-type(2) {
+    animation: ani9 4.2s;
+}
+
+@keyframes ani9 {
+    0%{opacity:0; transform:translate(-30px, 15px);}
+    100%{opacity: .6;}
+}
+
+.textp2 span:nth-of-type(3) {
+    animation: ani10 4s ;
+}
+
+@keyframes ani10 {
+    0%{opacity: 0; transform: translate(-15px, 15px);}
+    40%{opacity: 1;}
+}
+
+/* textp3 */
+.textp3 span:nth-of-type(1),
+.textp3 span:nth-of-type(4) {
+    animation: ani16 3.5s ;
+}
+
+@keyframes ani16 {
+    0%{opacity: 0; transform:translate(-50px,50px);}
+    30%{opacity: 0;}
+}
+
+.textp3 span:nth-of-type(2) {
+    animation: ani17 4.2s ;
+}
+
+@keyframes ani17 {
+    0%{opacity:0; transform: translateX(-30px);}
+    30%{opacity: 0;}
+}
+
+.textp3 span:nth-of-type(3) {
+    animation:ani18 4s ;
+}
+
+@keyframes ani18 {
+    0%{opacity: 0; transform: translate(-60px, 50px);}
+    50%{opacity: 1;}
+}
