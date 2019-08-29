@@ -5,6 +5,7 @@ import java.util.Map;
 
 import com.example.learn_springboot.service.HomeService;
 
+import org.apache.ibatis.annotations.ResultMap;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -23,22 +24,35 @@ public class HomeController {
     public ModelAndView home(@RequestParam Map<String, Object> paramMap, @PathVariable String action,
             ModelAndView modelAndView) {
 
-        if (paramMap.get("isLogin") == null) {
-            paramMap.put("isLogin", false);
-        }
         Object resultMap = new HashMap<String, Object>();
 
+        //paramMap에 로그인 추가
+        if (paramMap.get("isLogin") == null ) {
+            paramMap.put("isLogin", "false");
+        }
+        
         if ("chkLogin".equals(action)) {
+            //service.login이용하여 database에서 id pw 값 비교
             resultMap = service.login(paramMap);
+            //index로 다시 돌아오기
             action = "index";
+            modelAndView.addObject("resultMap", resultMap);
         }
-
-        if ("chksubmit".equals(action)) {
+        else if ("chksubmit".equals(action)) {
             resultMap = service.submit(paramMap);
+            modelAndView.addObject("resultMap", resultMap);
         }
-
-        modelAndView.addObject("paramMap", paramMap);
-        modelAndView.addObject("resultMap", resultMap);
+        //로그아웃 알고리즘 param을 초기화 -> isLogin값 false로 추가 -> index로 리턴
+        else if ( "logout".equals(action))
+        {
+            paramMap.clear();
+            paramMap.put("isLogin", "false");
+            modelAndView.addObject("resultMap", paramMap);
+            action = "index";
+        } 
+        else {
+            modelAndView.addObject("resultMap", paramMap);
+        }
         modelAndView.setViewName("/home/" + action);
 
         return modelAndView;
