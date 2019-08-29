@@ -26,12 +26,15 @@ public class HomeController {
 
         Object resultMap = new HashMap<String, Object>();
 
+        //paramMap에 로그인 추가
         if (paramMap.get("isLogin") == null ) {
             paramMap.put("isLogin", "false");
         }
-
+        
         if ("chkLogin".equals(action)) {
+            //service.login이용하여 database에서 id pw 값 비교
             resultMap = service.login(paramMap);
+            //index로 다시 돌아오기
             action = "index";
             modelAndView.addObject("resultMap", resultMap);
         }
@@ -39,6 +42,7 @@ public class HomeController {
             resultMap = service.submit(paramMap);
             modelAndView.addObject("resultMap", resultMap);
         }
+        //로그아웃 알고리즘 param을 초기화 -> isLogin값 false로 추가 -> index로 리턴
         else if ( "logout".equals(action))
         {
             paramMap.clear();
