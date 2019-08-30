@@ -29,7 +29,9 @@ public class SignupService {
             ((Map) dataMap).put("MSG", "저장완료");
         }
         return obj_count;
-//
+        
+
+	
 		// if (((Map)resultObject).get("PASSWORD").equals(((Map) dataMap).get("PASSWORD"))){
 		// 	((Map)dataMap).put("isLogin", "true");
 		// } else {

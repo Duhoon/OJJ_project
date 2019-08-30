@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <!-- <th:block th:replace="fragments/commonHead"></th:block> -->
+    <th:block th:replace="fragments/commonLink"></th:block>
+</head>
+
+<body>
+    <!-- .wrap -->
+    <div class="wrap">
+        <!-- header -->
+        <th:block th:replace="fragments/header :: common_navbar"></th:block>
+
+        <!-- carousel -->
+        <th:block th:replace="fragments/carousel :: slider"></th:block>
+        <!-- carousel END -->
+
+        <!-- content1 -->
+        <div class="content1">
+            <div class="row">
+                <div class="col-4">
+                    <div class="content_inner">
+                        <div class="notice">
+                            <p>공지사항</p>
+                            <div class="content_list">
+                                <div class="accordion" id="accordionExample">
+                                    <div class="card">
+                                        <div class="card-header" id="headingOne">
+                                            <h2 class="mb-0">
+                                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                          <img th:src="@{/images/list.PNG}" class="mr-3">
+                          우리카페가 6월 21일부터 별명사용카페로 전환되었습니다!
+                        </button>
+                                            </h2>
+                                        </div>
+                                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                            <div class="card-body">
+                                                특색있는 별명을 사용하는만큼 더 재밌는 카페 활동이 되겠죠?
+                                                <br> 아직 별명이 없으시다면, 나를 잘 표현할 수 있는 별명을 만들어보세요.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-header" id="headingTwo">
+                                            <h2 class="mb-0">
+                                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                          <img th:src="@{/images/list.PNG}" class="mr-3">
+                          우리카페가 7월 28일부터 별명사용카페로 전환되었습니다!
+                        </button>
+                                            </h2>
+                                        </div>
+                                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                                            <div class="card-body">
+                                                특색있는 별명을 사용하는만큼 더 재밌는 카페 활동이 되겠죠?
+                                                <br> 아직 별명이 없으시다면, 나를 잘 표현할 수 있는 별명을 만들어보세요.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-header" id="headingThree">
+                                            <h2 class="mb-0">
+                                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                          <img th:src="@{/images/list.PNG}" class="mr-3">
+                          우리카페가 8월 08일부터 별명사용카페로 전환되었습니다!
+                        </button>
+                                            </h2>
+                                        </div>
+                                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                                            <div class="card-body">
+                                                특색있는 별명을 사용하는만큼 더 재밌는 카페 활동이 되겠죠?
+                                                <br> 아직 별명이 없으시다면, 나를 잘 표현할 수 있는 별명을 만들어보세요.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-4">
+                    <div class="content_inner">
+                        <div class="schedule">
+                            <p>일정안내</p>
+                            <div class="content_list">
+                                <div class="accordion" id="accordionExample2">
+                                    <div class="card">
+                                        <div class="card-header" id="headingFour">
+                                            <h2 class="mb-0">
+                                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                          <img th:src="@{/images/list.PNG}" class="mr-3">
+                          우리카페가 6월 21일부터 별명사용카페로 전환되었습니다!
+                        </button>
+                                            </h2>
+                                        </div>
+                                        <div id="collapseFour" class="collapse show" aria-labelledby="headingFour" data-parent="#accordionExample2">
+                                            <div class="card-body">
+                                                특색있는 별명을 사용하는만큼 더 재밌는 카페 활동이 되겠죠?
+                                                <br> 아직 별명이 없으시다면, 나를 잘 표현할 수 있는 별명을 만들어보세요.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-header" id="headingFive">
+                                            <h2 class="mb-0">
+                                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                          <img th:src="@{/images/list.PNG}" class="mr-3">
+                          우리카페가 7월 28일부터 별명사용카페로 전환되었습니다!
+                        </button>
+                                            </h2>
+                                        </div>
+                                        <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample2">
+                                            <div class="card-body">
+                                                특색있는 별명을 사용하는만큼 더 재밌는 카페 활동이 되겠죠?
+                                                <br> 아직 별명이 없으시다면, 나를 잘 표현할 수 있는 별명을 만들어보세요.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-header" id="headingSix">
+                                            <h2 class="mb-0">
+                                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                          <img th:src="@{/images/list.PNG}" class="mr-3">
+                          우리카페가 8월 08일부터 별명사용카페로 전환되었습니다!
+                        </button>
+                                            </h2>
+                                        </div>
+                                        <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample2">
+                                            <div class="card-body">
+                                                특색있는 별명을 사용하는만큼 더 재밌는 카페 활동이 되겠죠?
+                                                <br> 아직 별명이 없으시다면, 나를 잘 표현할 수 있는 별명을 만들어보세요.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-4">
+                    <div class="content_inner">
+                        <div class="q_and_a">
+                            <p>Q & A</p>
+                            <div class="content_list">
+                                <ul class="list-group">
+                                    <li class="list-group-item active">온양정씨 시제는 어디에서 지내나요 저는 정랑공파입니다.</li>
+                                    <li class="list-group-item">온양정씨 몇대 손인지 알고 싶어요</li>
+                                    <li class="list-group-item">28세 정원호 배 평산 신철희 묘 참배</li>
+                                    <li class="list-group-item">2007년 시제 후 사진</li>
+                                    <li class="list-group-item">온양정씨 과거급제자(朝鮮時代)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- .content2 -->
+        <th:block th:replace="fragments/content2 :: content2_wrapper"></th:block>
+    </div>
+    <!-- .wrap END -->
+    <!--footer-->
+    <th:block th:replace="fragments/footer :: common_bottom"></th:block>
+</body>
+
+</html>
