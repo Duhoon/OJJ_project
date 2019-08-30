@@ -11,10 +11,10 @@
             <h2 class="blind">Main Navigation</h2>
 
             <ul>
-                <li><a href="#" th:href="@{/introduce/introduce}">역사 소개</a></li>
-                <li><a href="#" th:href="@{/introduce/people}">인물 소개</a></li>
-                <li><a href="#" th:href="@{/introduce/location}">역사 유적지</a></li>
-                <li><a href="#" th:href="@{/introduce/root}">종가 내력</a></li>
+                <li><a href="#" th:href="@{/introduce/introduce}" onclick="goPage(this); return false">역사 소개</a></li>
+                <li><a href="#" th:href="@{/introduce/people}" onclick="goPage(this); return false">인물 소개</a></li>
+                <li><a href="#" th:href="@{/introduce/location}" onclick="goPage(this); return false">역사 유적지</a></li>
+                <li><a href="#" th:href="@{/introduce/root}" onclick="goPage(this); return false">종가 내력</a></li>
             </ul>
         </nav>
         <nav class="sns ">
@@ -59,7 +59,7 @@
         </a>
         </span>
         <span>
-        <a class="gnbmenu " href="# " th:href="@{/log/signup_agree} ">
+        <a class="gnbmenu " href="# " th:href="@{/log/signup_agree}">
             <p>회원가입</p>
             <span class="sr-only ">(current)</span>
         </a>
