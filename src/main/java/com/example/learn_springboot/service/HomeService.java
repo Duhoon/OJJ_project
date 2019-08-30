@@ -40,16 +40,4 @@ public class HomeService {
 		return resultObject;
 	}
 
-	public Object submit(Object dataMap) {
-		String sqlMapId = "home.search";
-
-		Object resultObject = dao.getObject(sqlMapId, dataMap);
-		if (((Map) resultObject).get("PASSWORD").equals(((Map) dataMap).get("PASSWORD"))) {
-			((Map) dataMap).put("isLogin", "true");
-		} else {
-			((Map) dataMap).put("isLogin", "false");
-		}
-		return resultObject;
-	}
-
 }

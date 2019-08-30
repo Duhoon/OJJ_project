@@ -1,11 +1,3 @@
-create table student
-(
-   id integer not null,
-   name varchar(255) not null,
-   passport_number varchar(255) not null,
-   primary key(id)
-);
-
 -- 그룹/조직/부서 구조도
 CREATE TABLE CIP_ORGANIZATION
 (
@@ -29,6 +21,15 @@ CREATE TABLE home
     NAME      VARCHAR(45)    NOT NULL    COMMENT '이름', 
     PRIMARY KEY (ID)
 );
+
+CREATE TABLE BOARD
+(
+	TITLE varchar(45) NOT NULL COMMENT '타이틀',
+	BODY varchar(45) NOT NULL COMMENT '내용',
+	NAME varchar(45) COMMENT '작성자',
+	SEQ varchar(45) COMMENT '일련번호',
+	PRIMARY KEY (SEQ)
+) ;
 
 
 

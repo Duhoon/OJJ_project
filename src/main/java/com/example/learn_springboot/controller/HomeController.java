@@ -4,8 +4,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.example.learn_springboot.service.HomeService;
+import com.example.learn_springboot.service.OrganizationService;
 
-import org.apache.ibatis.annotations.ResultMap;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -18,6 +18,9 @@ public class HomeController {
 
     @Autowired
     private HomeService service;
+    
+    @Autowired
+    private OrganizationService or_service;
 
     // action == chkLogin
     @RequestMapping(value = "/home/{action}")
@@ -38,10 +41,6 @@ public class HomeController {
             action = "index";
             modelAndView.addObject("resultMap", resultMap);
         }
-        else if ("chksubmit".equals(action)) {
-            resultMap = service.submit(paramMap);
-            modelAndView.addObject("resultMap", resultMap);
-        }
         //로그아웃 알고리즘 param을 초기화 -> isLogin값 false로 추가 -> index로 리턴
         else if ( "logout".equals(action))
         {
@@ -50,6 +49,11 @@ public class HomeController {
             modelAndView.addObject("resultMap", paramMap);
             action = "index";
         } 
+        else if("board".equals(action)){
+            resultMap = or_service.getBoard(paramMap);
+            modelAndView.addObject("resultMap", paramMap);
+            modelAndView.addObject("dataMap", resultMap);
+        }
         else {
             modelAndView.addObject("resultMap", paramMap);
         }
