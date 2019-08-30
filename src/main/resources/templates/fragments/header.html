@@ -1,38 +1,39 @@
 <div th:fragment="common_navbar">
-<header>
-    <!--header-->
-    <!-- Logo -->
-    <h1 class="logo">
+    <header>
+        <!--header-->
+        <!-- Logo -->
+        <h1 class="logo">
             <a href="/home/index" onclick="goPage(this); return false">
                 <img th:src="@{/images/logo.PNG}">
             </a>
         </h1>
-    <nav class="mnb">
-        <h2 class="blind">Main Navigation</h2>
-        <ul>
-            <li><a href="introduce">역사 소개</a></li>
-            <li><a href="people">인물 소개</a></li>
-            <li><a href="location">역사 유적지</a></li>
-            <li><a href="root">종가 내력</a></li>
-        </ul>
-    </nav>
-    <nav class="sns">
-        <h2 class="blind">sub</h2>
-        <div>
-            <a href="#">
-                자유 게시판
-                <span class="sr-only">(current)</span>
-            </a>
-            <a href="admin">
-                <p>회원 관리</p>
-                <span class="sr-only">(current)</span>
-            </a>
-        </div>
-    </nav>
-</header>
-<!--/header-->
+        <nav class="mnb">
+            <h2 class="blind">Main Navigation</h2>
 
-<hr>
+            <ul>
+                <li><a href="#" th:href="@{/introduce/introduce}">역사 소개</a></li>
+                <li><a href="#" th:href="@{/introduce/people}">인물 소개</a></li>
+                <li><a href="#" th:href="@{/introduce/location}">역사 유적지</a></li>
+                <li><a href="#" th:href="@{/introduce/root}">종가 내력</a></li>
+            </ul>
+        </nav>
+        <nav class="sns ">
+            <h2 class="blind ">sub</h2>
+            <div>
+                <a href="# ">
+                자유 게시판
+                <span class="sr-only ">(current)</span>
+            </a>
+                <a href="admin ">
+                    <p>회원 관리</p>
+                    <span class="sr-only ">(current)</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+    <!--/header-->
+
+    <hr>
 
 <!--.gnb-->
 <nav class="gnb">
@@ -52,17 +53,17 @@
             <p th:if="${resultMap.isLogin}=='true'" th:text="로그아웃"></p>
             <span class="sr-only">(current)</span>
         </a>
-        <a class="gnbmenu" href="/log/login">
-            <p th:if="${resultMap.isLogin}=='false'" th:text="로그인"></p>
-            <span class="sr-only">(current)</span>
+        <a class="gnbmenu " href="/log/login ">
+            <p th:if="${resultMap.isLogin}=='false' " th:text="로그인 "></p>
+            <span class="sr-only ">(current)</span>
         </a>
-    </span>
-    <span>
-        <a class="gnbmenu" href="#" th:href="@{/log/signup_agree}">
+        </span>
+        <span>
+        <a class="gnbmenu " href="# " th:href="@{/log/signup_agree} ">
             <p>회원가입</p>
-            <span class="sr-only">(current)</span>
+            <span class="sr-only ">(current)</span>
         </a>
-    </span>
-</nav>
-<!--/.gnb-->
+        </span>
+    </nav>
+    <!--/.gnb-->
 </div>
