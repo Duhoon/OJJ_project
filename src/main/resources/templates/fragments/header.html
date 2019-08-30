@@ -9,7 +9,6 @@
         </h1>
     <nav class="mnb">
         <h2 class="blind">Main Navigation</h2>
-        
         <ul>
             <li><a href="introduce">역사 소개</a></li>
             <li><a href="people">인물 소개</a></li>
@@ -45,10 +44,8 @@
     </form>
     <h2 class="blind">For member</h2>
     <span>
-        <a href="#">
-            <p class="gnbmenu" th:if="${resultMap.isLogin}=='true'" th:text="${resultMap.NAME}"></p>
-            <span class="sr-only">(current)</span>
-        </a>
+        <p class="gnbmenu" th:if="${resultMap.isLogin}=='true'" th:text="${resultMap.NAME}"></p>
+        <span class="sr-only">(current)</span>
     </span>
     <span>
         <a class="gnbmenu" href="/home/logout">
