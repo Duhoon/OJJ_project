@@ -5,7 +5,7 @@
 <head>
     <th:block th:replace="fragments/commonLink"></th:block>
     <script>
-        function signup_submit(v) { 
+        function signup_submit(v) {
             if (v.ID.value == "") {
                 alert("아이디를 입력해주세요");
                 v.ID.focus();
@@ -40,13 +40,12 @@
                 </div>
                 <div class="form-group">
                     <label for="inputId">아이디</label>
-                    <input type="text" class="form-control" id="inputId" name="ID" placeholder="아이디를 입력해 주세요"
-                        value="asd">
+                    <input type="text" class="form-control" id="inputId" name="ID" placeholder="아이디를 입력해 주세요">
                 </div>
                 <div class="form-group">
                     <label for="inputPassword">비밀번호</label>
                     <input type="password" class="form-control" id="inputPassword" name="PASSWORD"
-                        placeholder="비밀번호를 입력해주세요" value="asd">
+                        placeholder="비밀번호를 입력해주세요">
                 </div>
                 <div class="form-group">
                     <label for="inputPasswordCheck">비밀번호 확인</label>
