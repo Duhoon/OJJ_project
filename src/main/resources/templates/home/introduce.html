@@ -6,47 +6,41 @@
 </head>
 
 <body>
-    <!-- header -->
-    <th:block th:replace="fragments/header :: common_navbar"></th:block>
+    <div class="wrap">
+        <!-- header -->
+        <th:block th:replace="fragments/header :: common_navbar"></th:block>
+        <div class="main">
+            <main>
+                <div class="content_wrapper">
+                    <div class="row">
 
-    <div class="border border-dark mt-5">
-        <div class="row">
 
-            <div class="col-3">
-                <div id="sidebar-wrapper border border-dark">
-                    <ul class="sidebar-nav border ml-3">
-                        <li class="sidebar-brand">
-                            <a href="#">정씨 소개</a>
-                        </li>
-                        <li><a href="introduce">역사 소개</a></li>
-                        <li><a href="people">인물</a></li>
-                        <li><a href="location">역사 유적지</a></li>
 
-                    </ul>
+                        <div class="col-6">
+                            <h2 class="card-text"><strong>온양정(溫陽鄭)씨 소개</strong> </h2><br><br>
+                            <p class="card-text"><strong>시 조 명</strong></p><br>
+                            <p class="card-text">정보천 (鄭普天) </p><br><br>
+                            <p class="card-text"><strong>시조 유래</strong> </p><br>
+                            <p class="card-text">고려에서 호부 상서(戶部尙書)를 역임하였다. </p><br><br>
+                            <p class="card-text"><strong>본과 창성의 유래</strong> </p><br>
+                            <p class="card-text">문헌(文獻)에 의하면 고려 태조(太祖)가 탕정(湯井 : 온양의 고호)에 왔다가 고을 관리의 공(功)을 가상히 여겨 누대(累代)가
+                                토착 세거(土着世居)한 정씨 일가(鄭氏一家)에게 향직(鄕職)인 호장(戶長)을 제수(除授)했다고 한다.<br> 그리하여 후손들은 온양(溫陽)을 본관(本貫) 으로
+                                삼아 세계(世系)를 이어왔다. </p><br><br>
+
+                            <p class="card-text"><strong>지명 유래</strong> </p><br>
+                            <p class="card-text">충청남도(忠淸南道) 아산군(牙山郡)에 위치한 지명(地名)으로, 본래 백제(百濟)의 탕정군(湯井郡)을 통일신라 문무왕이 주(州)로
+                                승격시켜 총관(摠管)을 두었다가 후에 군(郡)으로 삼았으며, 고려 초에 온수군(溫水郡)으로 고치고 현종(顯宗) 때 천안부(天安府)에 속하게 하였다.
+                                1172년(명종 2) 현(縣)으로 강등되었고 조선 태종 때 신창현(新昌縣)과 합하여 온창(溫昌)이라 하다가 다시 온수현(溫水縣)이라 하였으며,
+                                세종 때 온양군(溫陽郡)이 되었고, 1913년 아산군(牙山郡)에 속한 온양면(溫陽面)이 된 후 지금의 온양읍에 이르고 있다. </p><br><br> 온양정씨는
+                            조선조에서 상신(相臣) 2명, 공신 1명, 장신 1명, 문과 급제자 43명을 배출했다.
+
+                        </div>
+
+
+                    </div>
                 </div>
-            </div>
-
-
-
-            <div class="col-6">
-                <h2 class="card-text"><strong>온양정(溫陽鄭)씨 소개</strong> </h2><br><br>
-                <p class="card-text"><strong>시 조 명</strong></p><br>
-                <p class="card-text">정보천 (鄭普天) </p><br><br>
-                <p class="card-text"><strong>시조 유래</strong> </p><br>
-                <p class="card-text">고려에서 호부 상서(戶部尙書)를 역임하였다. </p><br><br>
-                <p class="card-text"><strong>본과 창성의 유래</strong> </p><br>
-                <p class="card-text">문헌(文獻)에 의하면 고려 태조(太祖)가 탕정(湯井 : 온양의 고호)에 왔다가 고을 관리의 공(功)을 가상히 여겨 누대(累代)가 토착 세거(土着世居)한 정씨 일가(鄭氏一家)에게 향직(鄕職)인 호장(戶長)을 제수(除授)했다고 한다.<br> 그리하여 후손들은 온양(溫陽)을 본관(本貫) 으로 삼아 세계(世系)를 이어왔다. </p><br><br>
-
-                <p class="card-text"><strong>지명 유래</strong> </p><br>
-                <p class="card-text">충청남도(忠淸南道) 아산군(牙山郡)에 위치한 지명(地名)으로, 본래 백제(百濟)의 탕정군(湯井郡)을 통일신라 문무왕이 주(州)로 승격시켜 총관(摠管)을 두었다가 후에 군(郡)으로 삼았으며, 고려 초에 온수군(溫水郡)으로 고치고 현종(顯宗) 때 천안부(天安府)에 속하게 하였다. 1172년(명종 2) 현(縣)으로 강등되었고 조선 태종 때 신창현(新昌縣)과 합하여 온창(溫昌)이라 하다가 다시 온수현(溫水縣)이라 하였으며,
-                    세종 때 온양군(溫陽郡)이 되었고, 1913년 아산군(牙山郡)에 속한 온양면(溫陽面)이 된 후 지금의 온양읍에 이르고 있다. </p><br><br> 온양정씨는 조선조에서 상신(相臣) 2명, 공신 1명, 장신 1명, 문과 급제자 43명을 배출했다.
-
-            </div>
-
-
+            </main>
         </div>
-    </div>
-
     </div>
 
 </body>
