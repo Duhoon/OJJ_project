@@ -1,6 +1,6 @@
+
 <!-- /.row -->
-<div xmlns:th="http://www.thymeleaf.org" layout:decorator="layout/defaultLayout">
-	<th:block layout:fragment="layout.content">
+<div xmlns:th="http://www.thymeleaf.org">
 		<script>
 			$(document).ready(function () {
 				$("#layerModal").click(function () {
@@ -33,20 +33,22 @@
 									<td><input type="checkbox" id="selecctall" /></td>
 									<td th:text=${resultData.ORGANIZATION_SEQ}>ORGANIZATION_SEQ</td>
 									<td><a href="./organization/read"
-											th:href=@{/organization/read(ORGANIZATION_SEQ=${resultData.ORGANIZATION_SEQ})} th:text=${resultData.NAME}>NAME
-											</a> </td> <td th:text=${resultData.TELEPHONE}>TELEPHONE</td>
+											th:href=@{/organization/read(ORGANIZATION_SEQ=${resultData.ORGANIZATION_SEQ})}
+											th:text=${resultData.NAME}>NAME
+										</a> </td>
+									<td th:text=${resultData.TELEPHONE}>TELEPHONE</td>
 									<td th:text=${resultData.ORDER_NUMBER}>ORDER_NUMBER</td>
 									<td><a href="./organization/update"
 											th:href=@{/organization/update(ORGANIZATION_SEQ=${resultData.ORGANIZATION_SEQ})}>edit
 											</a> </td> <td><a href="./organization/delete"
 												th:href=@{/organization/delete(ORGANIZATION_SEQ=${resultData.ORGANIZATION_SEQ})}>delete
-												</a> </td> </tr> </tbody> </table> </div> <!-- /.table-responsive -->
+												</a> </td> 
+											</tr> </tbody> </table> </div> <!-- /.table-responsive -->
 					</div>
 					<!-- /.panel-body -->
 				</div>
 				<!-- /.panel -->
 			</div>
 			<!-- /.col-lg-12 -->
-	</th:block>
 </div>
 <!-- /.row -->

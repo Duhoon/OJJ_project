@@ -1,8 +1,3 @@
-insert into student
-values(10001,'Ranga', 'E1234567');
-insert into student
-values(10002,'Ravi', 'A1234568');
-
 -- 그룹/조직/부서 구조도
 insert into CIP_ORGANIZATION 
 (ORGANIZATION_SEQ,NAME,TELEPHONE,ORDER_NUMBER,PARENT_ORGANIZATION_SEQ) 
@@ -14,3 +9,7 @@ insert into home
 values('test_id','test_pw','test_name');
 insert into home
 values('hyun','9772','YuJin');
+
+
+insert into BOARD
+values('title_____','body_____','JECHAN','1');

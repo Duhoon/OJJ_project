@@ -61,4 +61,13 @@
 		delete from CIP_ORGANIZATION
 		where ORGANIZATION_SEQ = #{ORGANIZATION_SEQ}
 	</delete>
+
+	<select id="board_list" resultType="Map" parameterType="Map" timeout="10">
+		select 
+			TITLE			
+			, BODY			
+			, NAME			
+			, SEQ			
+		from BOARD
+	</select>
 </mapper>

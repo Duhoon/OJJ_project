@@ -33,6 +33,16 @@ public class OrganizationService {
 		return resultObject;
 	}
 
+	public Object getBoard(Object dataMap) {
+		String sqlMapId = "organization.board_list";
+
+		Object resultObject = new HashMap<>();
+		((Map<String, Object>) resultObject).put("resultList", dao.getList(sqlMapId,dataMap));
+		// ((Map<String, Object>) resultObject).put("resultList", repository.findAll());
+
+		return resultObject;
+	}
+
 	public Object getObject(Object dataMap) {
 		String sqlMapId = "organization.read";
 
