@@ -1,6 +1,5 @@
 package com.example.learn_springboot.service;
 
-import java.util.HashMap;
 import java.util.Map;
 
 import com.example.learn_springboot.repository.HomeRepository;
@@ -25,7 +24,7 @@ public class HomeService {
 	public Object login(Object dataMap) {
 		String sqlMapId = "home.search";
 
-		Object resultObject = dao.getObject(sqlMapId, dataMap);
+		Object resultObject = dao.getList(sqlMapId, dataMap);
 		// ID값을 찾을수 없다
 		if (((Map) resultObject) == null) {
 			((Map) resultObject).put("isLogin", "false");

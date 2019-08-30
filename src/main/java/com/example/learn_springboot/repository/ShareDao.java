@@ -11,19 +11,13 @@ public class ShareDao{
 	private SqlSessionTemplate sqlSession;
 
 	public Object getList(String sqlMapId, Object dataMap) {
-		Object resultObject = sqlSession.selectList(sqlMapId, dataMap);
+		Object resultObject = sqlSession.selectOne(sqlMapId, dataMap);
 
 		return resultObject;
     }
 
-<<<<<<< HEAD
     public int getObject(String sqlMapId, Object dataMap) {
 		int resultObject = sqlSession.selectOne(sqlMapId, dataMap);
-=======
-    public Object getObject(String sqlMapId, Object dataMap) {
-		Object resultObject = sqlSession.selectOne(sqlMapId, dataMap);
-		
->>>>>>> dcecfa41f5356b0101407b5cf53538a6cb6b5501
 		return resultObject;
 	}
 
