@@ -102,3 +102,10 @@
     color: #FFFFF3;
     font-weight: bold;
 }
+
+/* lte 1599px */
+@media screen and (max-width: 1599px) {
+    .gnb {
+        
+    }
+}
