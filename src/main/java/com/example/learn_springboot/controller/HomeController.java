@@ -17,9 +17,4 @@ public class HomeController{
         return viewName;
     }
 
-// @RequestMapping(value = "/introduce/{action}")
-//     public String ActionMethod3(@PathVariable String action) {
-//         String viewName = "/introduce/" + action;
-//         return viewName;
-//     }
 }
