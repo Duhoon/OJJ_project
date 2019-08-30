@@ -13,7 +13,7 @@
 
 
 > 이미지 캡처
-<img th:src="@{/index.PNG}" />
+<img th:src="@{/resources/index.PNG}" />
 
 > 화면 정의서
 
