@@ -1,0 +1,220 @@
+@charset "utf-8";
+
+/*reset*/
+*{margin: 0; padding: 0; box-sizing: border-box;}
+
+ul{
+    list-style-type: none;
+}
+
+img{
+    border: none;
+}
+
+hr{
+    display: none;
+}
+
+a{
+    text-decoration: none;
+    color: #555;
+}
+
+html{
+    font-size: 0.625em;
+}
+
+body{
+    font: 1.2rem/1.6 Arial, sans-serif;
+    color: #555;
+}
+
+.blind{
+    position: absolute;
+    text-indent: -99999px;
+    font-size: 0;
+    line-height: 0;
+}
+
+/*layout*/
+header{
+    position: fixed;
+    width: 15%;
+    height: 100%; /*position: fixed;이기때문에 브라우저상에 맞추는 것이 의미가 있다.*/
+}
+
+.gnb{
+    width: 85%;
+    height: 35px;
+    margin-left: 15%;
+}
+
+.main{
+    width: 85%;
+    margin-left: 15%;
+}
+
+.main:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+
+@keyframes scale{
+    0%{transform: scale(0);}
+}
+
+/*header*/
+h1{
+    width: 100%;
+    height: auto;
+    margin: 100px 0px 130px 0;
+}
+
+h1 a {
+    width: 100%;
+    height: 100%;
+}
+
+h1 a img {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+.mnb a{
+    display: block;
+    padding: 8px 20px; /*메뉴 위로 올라갔을 때의 간격*/
+    font-size: 1.7em;
+    text-align: center;
+    font-weight: bold;
+    color: #353848;
+}
+
+.mnb a:hover, .mnb a:focus{
+    color: #353848;
+}
+
+.sns{
+    position: absolute;
+    bottom: 50px;
+    width: 100%;
+    text-align: center;
+}
+
+/*.gnb*/
+.gnb{
+    position: relative;
+    background: #353848;
+}
+
+.gnb a{
+    color: #eee;
+    line-height: 35px;
+}
+
+.gnb span{
+    position: absolute;
+    display: inline-block;
+    height: 100%;
+}
+
+.gnb span:nth-of-type(2){
+    right: 80px;
+}
+
+.gnb span:last-of-type{
+    right: 10px;
+}
+
+
+/*lte 1599px*/
+@media screen and (max-width: 1599px){
+    /*layout*/
+    header{
+        position: relative;
+        width: 100%;
+        height: 80px;
+    }
+    .gnb, .main{
+        width: 100%;
+        margin-left: 0;
+    }
+    
+    /*header*/
+    h1{
+        float: left;
+        margin: 0 25px 0 0;
+        width: 300px;
+        height: auto;
+        background-size: contain;
+    }
+    .mnb{
+        float: right;
+        margin: 20px 200px 0 0;
+        font-size: 0.8em;
+    }
+    .mnb ul:after{
+        content: "";
+        display: block;
+        clear: both;
+    }
+    .mnb li{
+        float: left;
+    }
+    .sns{
+        bottom: 10px;
+        right: 20px;
+        width: auto; /*width에 100%를 준적이 없도록 만들어야 한다.*/
+    }
+}
+
+/*lte 1279px*/
+@media screen and (max-width: 1279px){
+    
+    /*.text*/
+    .content:nth-child(8) .text{
+        background: #eee;
+    }
+}
+
+/*lte 1023*/
+@media screen and (max-width:1023px){
+    
+    /*header*/
+    .mnb{
+        margin-right: 0;
+        font-size: 0.6em;
+    }
+    .sns{
+        display: none;
+    }
+}
+
+/*lte 767px*/
+@media screen and (max-width:767px){
+    
+    header{
+        height: auto;
+    }
+    h1{
+        float: none;
+        margin: 20px auto;
+    }
+    .mnb{
+        float: none;
+    }
+    .mnb li{
+        float: none;
+    }
+}
+
+/*lte 499px*/
+@media screen and (max-width: 499px){
+    /*layout*/
+    .gnb{
+        display: none;
+    }
+
+}
