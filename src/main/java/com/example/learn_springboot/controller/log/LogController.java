@@ -26,14 +26,13 @@ public class LogController {
         if (paramMap.get("isLogin") == null) {
             ((Map<String, Object>) resultMap).put("isLogin", "false");
         }
-        
-        if("save".equals(action)){
+
+        if ("save".equals(action)) {
             int obj = service.save(paramMap);
 
-            action="/home/index";
-        }
-        else {
-            action="/log/" + action;
+            action = "/home/index";
+        } else {
+            action = "/log/" + action;
         }
         modelAndView.setViewName(action);
         modelAndView.addObject("paramMap", paramMap);
@@ -43,8 +42,22 @@ public class LogController {
     }
 
     @RequestMapping(value = "/introduce/{action}")
-    public String ActionMethod2(@PathVariable String action) {
-        String viewName = "/introduce/" + action;
-        return viewName;
+    public ModelAndView ActionMethod2(@RequestParam Map<String, Object> paramMap, @PathVariable String action,
+            ModelAndView modelAndView) {
+
+        Object resultMap = new HashMap<String, Object>();
+
+        if (paramMap.get("isLogin") == null) {
+            ((Map<String, Object>) resultMap).put("isLogin", "false");
+        }
+        else
+        {
+            modelAndView.addObject("resultMap", paramMap);
+
+        }
+        action = "/introduce/" + action;
+        modelAndView.setViewName(action);
+        modelAndView.addObject("resultMap", resultMap);
+        return modelAndView;
     }
 }
