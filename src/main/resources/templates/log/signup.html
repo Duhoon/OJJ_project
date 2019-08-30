@@ -16,7 +16,7 @@
             </div>
         </div>
         <div class="col-12 mt-5 px-5 py-5">
-            <form role="form">
+            <form role="form" action="log/save" name="signup_form">
                 <div class="mb-4">
                     <h5>사이트 이용정보</h5>
                 </div>
@@ -76,7 +76,7 @@
             </form>
 
             <div class="form-group text-center" onsubmit="return false">
-                <button type="submit" id="join-submit" class="btn btn-secondary" href="http://localhost:8080/log/agree">
+                <button type="submit" id="join-submit" onclick="signup_save()"class="btn btn-secondary" href="http://localhost:8080/log/agree">
                           회원가입<i class="fa fa-check spaceLeft"></i>
                   </button>
                 <button class="btn btn-secondary" onclick="movehome()">
@@ -86,6 +86,9 @@
 
 
             <script>
+                function signup_save(){
+                    document.signup_form.submit();
+                }
                 function signup_submit(v) { //구현중
                     if (v.uid.value == "") {
                         alert("아이디를 입력해주세요");
