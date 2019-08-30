@@ -19,6 +19,7 @@
 
 
 > ERD
-
+<img src="/src/main/resources/oj.JPG" th:src="@{/src/main/resources/oj.JPG}" />
 
 > 주요 화면
+<img src="/src/main/resources/12.PNG" th:src="@{/src/main/resources/12.PNG}" />
