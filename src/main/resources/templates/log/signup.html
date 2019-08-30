@@ -5,7 +5,7 @@
 <head>
     <th:block th:replace="fragments/commonLink"></th:block>
     <script>
-        function signup_submit(v) { 
+        function signup_submit(v) {
             if (v.ID.value == "") {
                 alert("아이디를 입력해주세요");
                 v.ID.focus();
@@ -28,85 +28,113 @@
 
 <body>
     <th:block th:replace="fragments/header :: common_navbar"></th:block>
+    <div class="main">
+        <main>
+            <article class="join_wrapper">
+                <div class="page-header col-12">
+                    <h3>회원 가입</h3>
+                </div>
+                <div class="col-12 mt-5 join_form_wrapper">
+                    <form role="form" action="log/save" name="signup_form">
+                        <div class="mb-4 pr">
+                            <h5>사이트 이용정보</h5>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputId">아이디</label>
+                            <input type="text" class="form-control" id="inputId" placeholder="아이디를 입력해 주세요">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPassword">비밀번호</label>
+                            <input type="password" class="form-control" id="inputPassword" placeholder="비밀번호를 입력해주세요">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPasswordCheck">비밀번호 확인</label>
+                            <input type="password" class="form-control" id="inputPasswordCheck"
+                                placeholder="비밀번호 확인을 위해 다시한번 입력 해 주세요">
+                        </div>
 
-    <article class="container py-5 my-5 border border-black">
-        <div class="page-header px-5">
-            <div class="col-12 p-0">
-                <h3>회원 가입</h3>
-            </div>
-        </div>
-        <div class="col-12 mt-5 px-5 py-5">
-            <form action="/log/save" name="signup_form" method="POST" onsubmit="return signup_submit(this)">
-                <div class="mb-4">
-                    <h5>사이트 이용정보</h5>
-                </div>
-                <div class="form-group">
-                    <label for="inputId">아이디</label>
-                    <input type="text" class="form-control" id="inputId" name="ID" placeholder="아이디를 입력해 주세요"
-                        value="asd">
-                </div>
-                <div class="form-group">
-                    <label for="inputPassword">비밀번호</label>
-                    <input type="password" class="form-control" id="inputPassword" name="PASSWORD"
-                        placeholder="비밀번호를 입력해주세요" value="asd">
-                </div>
-                <div class="form-group">
-                    <label for="inputPasswordCheck">비밀번호 확인</label>
-                    <input type="password" class="form-control" id="inputPasswordCheck" name="PASSWORDCHK"
-                        placeholder="비밀번호 확인을 위해 다시한번 입력 해 주세요" value="asd">
-                </div>
+                        <hr class="featurette-divider">
+                        <div class="mb-4 pr">
+                            <h5>개인정보</h5>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputName">성명</label>
+                            <input type="text" class="form-control" id="inputName">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputEmail">이메일 주소</label>
+                            <input type="email" class="form-control" id="inputEmail">
+                        </div>
 
-                <hr class="featurette-divider">
-                <div class="mb-4">
-                    <h5>개인정보</h5>
-                </div>
-                <div class="form-group">
-                    <label for="inputName">성명</label>
-                    <input type="text" name="NAME" class="form-control" id="inputName" value="asd">
-                </div>
-                <div class="form-group">
-                    <label for="inputEmail">이메일 주소</label>
-                    <input type="email" name="EMAIL" class="form-control" id="inputEmail" value="asd@asd">
-                </div>
+                        <div class="form-group">
+                            <label for="inputMobile">휴대폰 번호</label>
+                            <input type="tel" class="form-control" id="inputMobile">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputAddress">주소</label>
+                            <input type="address" class="form-control" id="inputAddress">
+                        </div>
 
-                <div class="form-group">
-                    <label for="inputMobile">휴대폰 번호</label>
-                    <input type="tel" class="form-control" id="inputMobile" value="010-191-111">
-                </div>
-                <div class="form-group">
-                    <label for="inputAddress">주소</label>
-                    <input type="address" name="ADDRESS" class="form-control" id="inputAddress" value="asd">
-                </div>
+                        <hr class="featurette-divider">
+                        <div class="mb-4 pr">
+                            <h5>선택항목</h5>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputGenealogy">본관</label>
+                            <input type="text" class="form-control" id="inputGenealogy" placeholder="예) 온양정씨">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputGname">파종명</label>
+                            <input type="text" class="form-control" id="inputGname" placeholder="예) 소윤공파, 삼등공파, 부사공파 등">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputGth">파대수</label>
+                            <input type="text" class="form-control" id="inputGth" placeholder="대(代) : 20대, 31대 등">
+                        </div>
 
-                <hr class="featurette-divider">
-                <div class="mb-4">
-                    <h5>선택항목</h5>
-                </div>
-                <div class="form-group">
-                    <label for="inputGenealogy">본관</label>
-                    <input type="text" class="form-control" id="inputGenealogy" placeholder="예) 온양정씨" value="asd">
-                </div>
-                <div class="form-group">
-                    <label for="inputGname">파종명</label>
-                    <input type="text" class="form-control" id="inputGname" placeholder="예) 소윤공파, 삼등공파, 부사공파 등"
-                        value="asd">
-                </div>
-                <div class="form-group">
-                    <label for="inputGth">파대수</label>
-                    <input type="text" class="form-control" id="inputGth" placeholder="대(代) : 20대, 31대 등" value="asd">
-                </div>
 
-                <div class="form-group text-center">
-                    <button type="submit" id="join-submit" class="btn btn-secondary">
-                        회원가입<i class="fa fa-check spaceLeft"></i>
-                    </button>
-                    <button class="btn btn-secondary" onclick="movehome()">
-                        가입취소<i class="fa fa-times spaceLeft"></i>
-                    </button>
+                    </form>
+
+                    <div class="form-group text-center go" onsubmit="return false">
+                        <button type="submit" id="join-submit" onclick="signup_save()" class="btn btn-secondary"
+                            href="http://localhost:8080/log/agree">
+                            회원가입<i class="fa fa-check spaceLeft"></i>
+                        </button>
+                        <button class="btn btn-secondary" onclick="movehome()">
+                            가입취소<i class="fa fa-times spaceLeft"></i>
+                        </button>
+                    </div>
+
+
+                    <script>
+                        function signup_save() {
+                            document.signup_form.submit();
+                        }
+                        function signup_submit(v) { //구현중
+                            if (v.uid.value == "") {
+                                alert("아이디를 입력해주세요");
+                                v.uid.focus();
+                                return false;
+                            }
+
+                            if (v.upassword.value == "") {
+                                alert("비밀번호를 입력해주세요");
+                                v.upassword.focus();
+                                return false;
+                            }
+                            return true;
+                        }
+
+                        function movehome() {
+                            window.location.replace('http://localhost:8080/home');
+                        }
+                    </script>
                 </div>
-            </form>
-        </div>
-    </article>
+            </article>
+            <th:block th:replace="fragments/footer :: footer_wrapper"></th:block>
+        </main>
+    </div>
+
 </body>
 
 

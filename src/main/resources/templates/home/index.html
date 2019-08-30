@@ -20,7 +20,7 @@
         <!-- content1 -->
         <div class="content1">
           <div class="row">
-            <div class="col-4">
+            <div class="col-lg-4 col-md-12 col-sm-12">
               <div class="content_inner">
                 <div class="notice">
                   <p>공지사항</p>
@@ -89,7 +89,7 @@
               </div>
             </div>
 
-            <div class="col-4">
+            <div class="col-lg-4 col-md-12 col-sm-12">
               <div class="content_inner">
                 <div class="schedule">
                   <p class="row">
@@ -103,7 +103,7 @@
               </div>
             </div>
 
-            <div class="col-4">
+            <div class="col-lg-4 col-md-12 col-sm-12">
               <div class="content_inner">
                 <div class="q_and_a">
                   <p>Q & A</p>
@@ -124,8 +124,10 @@
         </div>
         <!-- .content2 -->
         <th:block th:replace="fragments/content2 :: content2_wrapper"></th:block>
+
+        <th:block th:replace="fragments/footer :: footer_wrapper"></th:block>
+      </main>
     </div>
-    </main>
   </div>
   <!-- .wrap END -->
 </body>
