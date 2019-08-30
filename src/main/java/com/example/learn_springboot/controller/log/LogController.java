@@ -47,4 +47,5 @@ public class LogController {
         String viewName = "/introduce/" + action;
         return viewName;
     }
+
 }
