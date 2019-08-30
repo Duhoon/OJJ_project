@@ -90,67 +90,13 @@
         <div class="col-4">
           <div class="content_inner">
             <div class="schedule">
-              <p>일정안내</p>
-              <div class="content_list">
-                <div class="accordion" id="accordionExample2">
-                  <div class="card">
-                    <div class="card-header" id="headingFour">
-                      <h2 class="mb-0">
-                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
-                          data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
-                          <img th:src="@{/images/list.PNG}" class="mr-3">
-                          우리카페가 6월 21일부터 별명사용카페로 전환되었습니다!
-                        </button>
-                      </h2>
-                    </div>
-                    <div id="collapseFour" class="collapse show" aria-labelledby="headingFour"
-                      data-parent="#accordionExample2">
-                      <div class="card-body">
-                        특색있는 별명을 사용하는만큼 더 재밌는 카페 활동이 되겠죠?
-                        <br>
-                        아직 별명이 없으시다면, 나를 잘 표현할 수 있는 별명을 만들어보세요.
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <div class="card-header" id="headingFive">
-                      <h2 class="mb-0">
-                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
-                          data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                          <img th:src="@{/images/list.PNG}" class="mr-3">
-                          우리카페가 7월 28일부터 별명사용카페로 전환되었습니다!
-                        </button>
-                      </h2>
-                    </div>
-                    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample2">
-                      <div class="card-body">
-                        특색있는 별명을 사용하는만큼 더 재밌는 카페 활동이 되겠죠?
-                        <br>
-                        아직 별명이 없으시다면, 나를 잘 표현할 수 있는 별명을 만들어보세요.
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card">
-                    <div class="card-header" id="headingSix">
-                      <h2 class="mb-0">
-                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
-                          data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                          <img th:src="@{/images/list.PNG}" class="mr-3">
-                          우리카페가 8월 08일부터 별명사용카페로 전환되었습니다!
-                        </button>
-                      </h2>
-                    </div>
-                    <div id="collapseSix" class="collapse" aria-labelledby="headingSix"
-                      data-parent="#accordionExample2">
-                      <div class="card-body">
-                        특색있는 별명을 사용하는만큼 더 재밌는 카페 활동이 되겠죠?
-                        <br>
-                        아직 별명이 없으시다면, 나를 잘 표현할 수 있는 별명을 만들어보세요.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <p class="row">
+                <span class="col-9">일정안내</span>
+                <span class="col-3 more">
+                  <a href="">more ></a>
+                </span>
+              </p>
+              <th:block th:replace="fragments/calendar :: calendar"></th:block>
             </div>
           </div>
         </div>
@@ -174,11 +120,11 @@
         </div>
       </div>
     </div>
-
     <!-- .content2 -->
     <th:block th:replace="fragments/content2 :: content2_wrapper"></th:block>
   </div>
   <!-- .wrap END -->
 </body>
+<script type="text/javascript" src="../static/js/calendar.js" th:src="@{/js/calendar.js}"></script>
 
 </html>
