@@ -1,6 +1,8 @@
 /* 처음 로딩할 때 svg */
 
+
 /* carousel */
+
 .carousel_wrapper {
     width: 100%;
     height: 600px;
@@ -28,7 +30,9 @@
     height: 100%;
 }
 
+
 /* .content1 */
+
 .content1 {
     width: 100%;
     margin-top: 10em;
@@ -49,7 +53,9 @@
     height: 100%;
 }
 
-.notice p, .schedule p, .q_and_a p {
+.notice p,
+.schedule p,
+.q_and_a p {
     font-size: 1.4em;
     border-bottom: 3px solid #8283a7;
     padding-bottom: 10px;
@@ -90,3 +96,39 @@
 .media-body h5 {
     font-size: 0.95em;
 }
+
+
+/*footer*/
+
+.footer_wrapper {
+    width: 100%;
+}
+
+.footline {
+    width: 100%;
+    height: 50px;
+    background: #353848;
+    float: right;
+    line-height: 50px;
+}
+
+.footlogo {
+    clear: both;
+    width: 20%;
+    display: inline-block;
+}
+
+.footcontent {
+    clear: both;
+    width: 78%;
+    display: inline-block;
+}
+
+
+/* .logo {
+    clear: both;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    float: left;
+} */
